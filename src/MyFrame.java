@@ -24,9 +24,18 @@ public class MyFrame extends JFrame{
         JButton btn = new JButton("Button testing");
         btn.setBounds(100, 100, 200, 50); // x, y, width, height
         this.add(btn);
-        JLabel label = new JLabel("dahdah");
-        label.setBounds(150, 200, 100, 30); // x, y, width, height
+        RandomNumberGen rng = new RandomNumberGen();
+        rng.setRandomNumber();
+
+        JLabel label = new JLabel(String.valueOf(rng.getRandomNumber()));
+        label.setBounds(100, 200, 100, 30); // x, y, width, height
         this.add(label);
+
+
+
+        JTextField inputField = new JTextField();
+        inputField.setBounds(100, 250, 200, 30); // x, y, width, height
+        this.add(inputField);
 
 
         JLabel iconlabel = new JLabel();
